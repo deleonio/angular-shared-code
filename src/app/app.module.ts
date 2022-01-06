@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-// import { BadgeComponent } from 'ng-lib/components/badge';
 import { BadgeInSrcComponent } from 'src/lib-copy/components/badge';
+import { BadgeComponent } from 'ng-lib/dist/badge';
 
 @NgModule({
-  declarations: [AppComponent, /* BadgeComponent,*/ BadgeInSrcComponent],
-  imports: [BrowserModule],
+  declarations: [AppComponent, BadgeInSrcComponent],
+  imports: [BrowserModule, BadgeComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
