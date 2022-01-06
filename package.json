@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "reinstall": "rm -rf node_modules/ng-lib package-lock.json && npm cache clean -f && npm i && npm start"
+    "reinstall": "rm -rf node_modules/ng-lib package-lock.json && npm cache clean -f && npm i && npm start",
+    "preinstall": "npm cache clean -f && rm -rf package-lock.json node_modules/@teester node_modules/ng-lib"
   },
   "private": true,
   "dependencies": {
@@ -19,7 +20,9 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
-    "ng-lib": "file:own_modules/ng-lib-1.0.1.tgz",
+    "@teester/skeepers-ui-core": "file:own_modules/teester-skeepers-ui-core-0.0.7.tgz",
+    "@teester/skeepers-ui-angular": "file:own_modules/teester-skeepers-ui-angular-0.0.7.tgz",
+    "ng-lib": "file:own_modules/ng-lib-1.0.4.tgz",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

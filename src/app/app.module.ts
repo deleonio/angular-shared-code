@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BadgeInSrcComponent } from 'src/lib-copy/components/badge';
-import { BadgeComponent } from 'ng-lib/dist/badge';
+import { LibModule } from 'ng-lib/dist';
 
 @NgModule({
   declarations: [AppComponent, BadgeInSrcComponent],
-  imports: [BrowserModule, BadgeComponent],
+  imports: [BrowserModule, LibModule],
   providers: [],
   bootstrap: [AppComponent],
 })
