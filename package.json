@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "reinstall": "rm -rf node_modules/ng-lib package-lock.json && npm cache clean -f && npm i && npm start",
-    "preinstall": "npm cache clean -f && rm -rf package-lock.json node_modules/@teester node_modules/ng-lib"
+    "preinstall": "rm -rf node_modules/@kolibri",
+    "reinstall": "rm -rf node_modules package-lock.json && npm i"
   },
   "private": true,
   "dependencies": {
@@ -20,9 +20,11 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
-    "@teester/skeepers-ui-core": "file:own_modules/teester-skeepers-ui-core-0.0.7.tgz",
-    "@teester/skeepers-ui-angular": "file:own_modules/teester-skeepers-ui-angular-0.0.7.tgz",
-    "ng-lib": "file:own_modules/ng-lib-1.0.4.tgz",
+    "@kolibri/angular": "file:own_modules/kolibri-angular-1.0.8-rc.3.tgz",
+    "@kolibri/lib": "file:own_modules/kolibri-lib-1.0.8-rc.2.tgz",
+    "@leanup/form": "1.2.18",
+    "@leanup/lib": "1.2.18",
+    "@stencil/core": "2.12.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

@@ -1,0 +1,209 @@
+.default {
+  --kolibri-background-color: white;
+  --kolibri-background-color-modal: rgba(0, 0, 0, 0.5);
+  --kolibri-border-color: #aaaaaa;
+  --kolibri-border-radius: 0.25rem;
+  --kolibri-color: black;
+  --kolibri-color-undefined: #fb00d2;
+  --kolibri-color-accent: #ef9e48;
+  --kolibri-color-active: #1e538f;
+  --kolibri-color-hover: #1e538f;
+  --kolibri-color-focus: #1e538f;
+  --kolibri-color-danger: #ad0e0b;
+  /* --kolibri-color-dark: #222222; */
+  --kolibri-color-error: #ad0e0b;
+  --kolibri-color-ghost: #333333;
+  --kolibri-color-info: #28568a;
+  /* --kolibri-color-light: #f2f2f2; */
+  --kolibri-color-normal: #326cae;
+  --kolibri-color-outline: #000;
+  --kolibri-color-primary: #1e538f;
+  --kolibri-color-secondary: #444444;
+  --kolibri-color-spin-1: #000000;
+  --kolibri-color-spin-2: #ff0000;
+  --kolibri-color-spin-3: #ffcc00;
+  --kolibri-color-success: #12632f;
+  --kolibri-color-warning: #854000;
+  --kolibri-font-family: BundesSans, Calibri, Verdana, Arial, Helvetica, sans-serif;
+  --kolibri-hyphens: auto;
+  --kolibri-line-height: 1.5em;
+  --kolibri-shadow-color: black;
+  --kolibri-spacing: 0.25em;
+}
+
+@font-face {
+  font-family: BundesSans;
+  font-weight: bold;
+  src: url(../bund/font/bundessansweb-bold-woff-data.woff);
+}
+
+/* LINK */
+.default kol-breadcrumb::part(link),
+.default kol-link::part(link),
+.default kol-link-group::part(link),
+/* .default kol-nav::part(link), */
+.default kol-skip-nav::part(link) {
+  color: var(--kolibri-color-normal);
+}
+.default kol-breadcrumb::part(link):focus,
+.default kol-breadcrumb::part(link):hover,
+.default kol-link::part(link):focus,
+.default kol-link::part(link):hover,
+.default kol-link-group::part(link):focus,
+.default kol-link-group::part(link):hover,
+/* .default kol-nav::part(link):focus, */
+/* .default kol-nav::part(link):hover, */
+.default kol-skip-nav::part(link):focus,
+.default kol-skip-nav::part(link):hover {
+  color: var(--kolibri-color-focus);
+}
+.default kol-breadcrumb::part(link):active,
+.default kol-link::part(link):active,
+.default kol-link-group::part(link):active,
+/* .default kol-nav::part(link):active, */
+.default kol-skip-nav::part(link):active {
+  color: var(--kolibri-color-active);
+}
+
+/* NAV */
+.default kol-nav::part(nav) {
+  border-radius: var(--kolibri-border-radius);
+  background-color: var(--kolibri-color-normal);
+}
+.default kol-nav::part(icon) {
+  font-size: 150%;
+}
+.default kol-nav::part(link) {
+  background-color: var(--kolibri-color-normal);
+  border-color: transparent;
+  border-radius: var(--kolibri-border-radius);
+  border-width: 1px;
+  grid: flex;
+  line-height: 2em;
+  padding: 0 0.5em;
+  color: white;
+  height: 100%;
+}
+.default kol-nav::part(link):focus,
+.default kol-nav::part(link):hover {
+  border-color: white;
+  background-color: var(--kolibri-color-focus);
+}
+.default kol-nav::part(link):active {
+  background-color: var(--kolibri-color-active);
+}
+.default kol-nav::part(selected) {
+  background-color: var(--kolibri-color-active);
+}
+.default kol-nav::part(span) {
+  padding: 0.5em 0;
+}
+.default kol-nav::part(li) {
+  padding: 0.15em;
+}
+.default kol-nav::part(li horizontal) {
+  border-right: 1px dotted white;
+}
+.default kol-nav::part(li horizontal selected) {
+  border-bottom-color: var(--kolibri-color-accent);
+  border-bottom-width: 6px;
+}
+.default kol-nav::part(li horizontal last) {
+  border-right: 0;
+}
+.default kol-nav::part(li vertical) {
+  border-radius: var(--kolibri-border-radius);
+  border-bottom: 1px dotted white;
+}
+.default kol-nav::part(li vertical selected) {
+  border-right-color: var(--kolibri-color-accent);
+  border-right-width: 6px;
+}
+.default kol-nav::part(li vertical last) {
+  border-bottom: 0;
+}
+
+/* ACCORDION, CARD */
+.default kol-accordion::part(accordion),
+.default kol-card::part(card) {
+  border-color: var(--kolibri-border-color);
+  border-color: #bec5c9;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--kolibri-border-radius);
+}
+.default kol-accordion::part(accordion open) {
+  background-color: #f2f3f4;
+}
+
+.default kol-accordion::part(icon) {
+  display: inline-block;
+  width: 2.5rem;
+  text-align: center;
+}
+
+.default kol-accordion::part(content),
+.default kol-accordion::part(header) {
+  padding-left: 2.5rem;
+}
+
+/* https://icofont.com/icons */
+/* https://fontawesome.com/v4.7/icon/chevron-right */
+.default kol-accordion::part(icon close)::before {
+  font-family: 'Icofont';
+  font-style: normal;
+  content: '\ef9a';
+  color: var(--kolibri-color-active);
+}
+.default kol-accordion::part(icon open)::before {
+  font-family: 'Icofont';
+  font-style: normal;
+  content: '\efc2';
+  color: var(--kolibri-color-active);
+}
+
+/* BUTTON */
+.default kol-button::part(button):focus,
+.default kol-button::part(button):hover,
+.default kol-modal::part(button):focus,
+.default kol-modal::part(button):hover,
+.default kol-table::part(button):focus,
+.default kol-table::part(button):hover,
+.default kol-tabs::part(button):focus,
+.default kol-tabs::part(button):hover {
+  background-color: white;
+  box-shadow: 0 0 0.15rem #999;
+}
+.default kol-button::part(ghost),
+.default kol-modal::part(ghost),
+.default kol-table::part(ghost),
+.default kol-tabs::part(ghost) {
+  background-color: transparent;
+  border-color: var(--kolibri-color-ghost);
+  color: var(--kolibri-color-ghost);
+}
+.default kol-button::part(ghost):focus,
+.default kol-button::part(ghost):hover,
+.default kol-modal::part(ghost):focus,
+.default kol-modal::part(ghost):hover,
+.default kol-table::part(ghost):focus,
+.default kol-table::part(ghost):hover,
+.default kol-tabs::part(ghost):focus,
+.default kol-tabs::part(ghost):hover {
+  background-color: var(--kolibri-color-ghost);
+  color: white;
+}
+.default kol-button::part(button-disabled):disabled,
+.default kol-button::part(button-disabled):focus,
+.default kol-button::part(button-disabled):hover,
+.default kol-modal::part(button-disabled):disabled,
+.default kol-modal::part(button-disabled):focus,
+.default kol-modal::part(button-disabled):hover,
+.default kol-table::part(button-disabled):disabled,
+.default kol-table::part(button-disabled):focus,
+.default kol-table::part(button-disabled):hover,
+.default kol-tabs::part(button-disabled):disabled,
+.default kol-tabs::part(button-disabled):focus,
+.default kol-tabs::part(button-disabled):hover {
+  box-shadow: 0 0 0.15rem #999;
+}
